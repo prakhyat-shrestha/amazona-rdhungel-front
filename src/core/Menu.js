@@ -32,13 +32,15 @@ const Menu = ({ history }) => (
             Home
           </Link>
 
-          <Link
-            className="text-gray-300 hover:text-white transition"
-            to="/user/dashboard"
-            style={isActive(history, "/user/dashboard")}
-          >
-            Dashboard
-          </Link>
+          {isAuthenticated() && isAuthenticated().user.role === 0 && (
+            <Link
+              className="text-gray-300 hover:text-white transition"
+              to="/user/dashboard"
+              style={isActive(history, "/user/dashboard")}
+            >
+              Dashboard
+            </Link>
+          )}
 
           {!isAuthenticated() && (
             <Fragment>
