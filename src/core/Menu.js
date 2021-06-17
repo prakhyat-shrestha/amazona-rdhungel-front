@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
+import { signout, isAuthenticated } from "../auth";
 
 const isActive = (history, path) => {
   if (history.location.pathname === path) {
@@ -30,20 +31,39 @@ const Menu = ({ history }) => (
           >
             Home
           </Link>
-          <Link
-            className="text-gray-300 hover:text-white transition"
-            to="/signin"
-            style={isActive(history, "/signin")}
-          >
-            Signin
-          </Link>
-          <Link
-            className="text-gray-300 hover:text-white transition"
-            to="/signup"
-            style={isActive(history, "/signup")}
-          >
-            Register
-          </Link>
+
+          {!isAuthenticated() && (
+            <Fragment>
+              <Link
+                className="text-gray-300 hover:text-white transition"
+                to="/signin"
+                style={isActive(history, "/signin")}
+              >
+                Signin
+              </Link>
+              <Link
+                className="text-gray-300 hover:text-white transition"
+                to="/signup"
+                style={isActive(history, "/signup")}
+              >
+                Register
+              </Link>
+            </Fragment>
+          )}
+
+          {isAuthenticated() && (
+            <span
+              className="text-gray-300 hover:text-white transition"
+              style={{ cursor: "pointer" }}
+              onClick={() =>
+                signout(() => {
+                  history.push("/");
+                })
+              }
+            >
+              Log Out
+            </span>
+          )}
         </div>
       </div>
       {/* navbar links ends */}
