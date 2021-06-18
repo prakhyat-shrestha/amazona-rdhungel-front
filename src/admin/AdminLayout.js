@@ -19,11 +19,18 @@ const AccountLayout = ({ className, children, history }) => {
             Dashboard
           </Link>
           <Link
-            to="/"
+            to="/create/category"
             className="flex items-center my-1 px-4 py-3 text-white border-l-4 border-trasparent hover:border-blue-600 hover:bg-gray-900 transition"
           >
             <i className="fas fa-layer-group w-5 mr-3" />
             category
+          </Link>
+          <Link
+            to="/create/product"
+            className="flex items-center my-1 px-4 py-3 text-white border-l-4 border-trasparent hover:border-blue-600 hover:bg-gray-900 transition"
+          >
+            <i className="fas fa-box  w-5 mr-3"></i>
+            product
           </Link>
           <span
             onClick={() =>
@@ -75,7 +82,7 @@ const AccountLayout = ({ className, children, history }) => {
 
   return (
     <div>
-      <div className="min-h-screen bg-gray-100">
+      <div className="bg-gray-100">
         {topHeader()}
         {adminLinks()}
       </div>
