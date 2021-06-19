@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "./Layout";
 import Banner from "./Banner";
 import Feature from "./Feature";
+import AdSection from "./AdSection";
 import { getProducts } from "./apiCore";
 import Card from "./Card";
 
@@ -42,7 +43,18 @@ const Home = () => {
       <Feature />
       <div class="container pb-16">
         <h2 class="text-2xl font-medium text-gray-800 uppercase mb-6">
-          top new arrival
+          new arrivals
+        </h2>
+        <div class="grid grid-cols-4 gap-6">
+          {productsByArrival.map((product, i) => (
+            <Card key={i} product={product} />
+          ))}
+        </div>
+      </div>
+      <AdSection />
+      <div class="container pb-16">
+        <h2 class="text-2xl font-medium text-gray-800 uppercase mb-6">
+          popular items
         </h2>
         <div class="grid grid-cols-4 gap-6">
           {productsBySell.map((product, i) => (

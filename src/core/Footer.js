@@ -12,16 +12,28 @@ const Footer = () => {
             dolorem.
           </p>
           <div className="flex space-x-6">
-            <a href className="text-gray-400 hover:text-gray-500">
+            <a
+              href="http://google.com"
+              className="text-gray-400 hover:text-gray-500"
+            >
               <i className="fab fa-facebook-f" />
             </a>
-            <a href className="text-gray-400 hover:text-gray-500">
+            <a
+              href="http://google.com"
+              className="text-gray-400 hover:text-gray-500"
+            >
               <i className="fab fa-twitter" />
             </a>
-            <a href className="text-gray-400 hover:text-gray-500">
+            <a
+              href="http://google.com"
+              className="text-gray-400 hover:text-gray-500"
+            >
               <i className="fab fa-instagram" />
             </a>
-            <a href className="text-gray-400 hover:text-gray-500">
+            <a
+              href="http://google.com"
+              className="text-gray-400 hover:text-gray-500"
+            >
               <i className="fab fa-linkedin-in" />
             </a>
           </div>
@@ -36,25 +48,25 @@ const Footer = () => {
               </h3>
               <div className="mt-4 space-y-4">
                 <a
-                  href
+                  href="http://google.com"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Marketing
                 </a>
                 <a
-                  href
+                  href="http://google.com"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Analytics
                 </a>
                 <a
-                  href
+                  href="http://google.com"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Commerce
                 </a>
                 <a
-                  href
+                  href="http://google.com"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Insights
@@ -67,25 +79,25 @@ const Footer = () => {
               </h3>
               <div className="mt-4 space-y-4">
                 <a
-                  href
+                  href="http://google.com"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Pricing
                 </a>
                 <a
-                  href
+                  href="http://google.com"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Documentation
                 </a>
                 <a
-                  href
+                  href="http://google.com"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Guides
                 </a>
                 <a
-                  href
+                  href="http://google.com"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   API Status
@@ -100,25 +112,25 @@ const Footer = () => {
               </h3>
               <div className="mt-4 space-y-4">
                 <a
-                  href
+                  href="http://google.com"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   About
                 </a>
                 <a
-                  href
+                  href="http://google.com"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Blog
                 </a>
                 <a
-                  href
+                  href="http://google.com"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Jobs
                 </a>
                 <a
-                  href
+                  href="http://google.com"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Press
@@ -131,25 +143,25 @@ const Footer = () => {
               </h3>
               <div className="mt-4 space-y-4">
                 <a
-                  href
+                  href="http://google.com"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Claim
                 </a>
                 <a
-                  href
+                  href="http://google.com"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Privacy
                 </a>
                 <a
-                  href
+                  href="http://google.com"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Policy
                 </a>
                 <a
-                  href
+                  href="http://google.com"
                   className="text-base text-gray-500 hover:text-gray-900 block"
                 >
                   Terms

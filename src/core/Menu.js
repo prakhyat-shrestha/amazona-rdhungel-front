@@ -32,6 +32,13 @@ const Menu = ({ history }) => (
             Home
           </Link>
 
+          <Link
+            className="text-gray-300 hover:text-white transition"
+            to="/shop"
+            style={isActive(history, "/shop")}
+          >
+            Shop
+          </Link>
           {isAuthenticated() && isAuthenticated().user.role === 0 && (
             <Link
               className="text-gray-300 hover:text-white transition"
