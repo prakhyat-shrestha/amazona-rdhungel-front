@@ -1,12 +1,27 @@
 import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 import ShowImage from "./ShowImage";
+import { addItem } from "./cartHelpers";
 
 const Card = ({ product }) => {
+  const [redirect, setRedirect] = useState(false);
+
+  const addToCart = () => {
+    // console.log('added');
+    addItem(product, setRedirect(true));
+  };
+
+  const shouldRedirect = (redirect) => {
+    if (redirect) {
+      return <Redirect to="/cart" />;
+    }
+  };
+
   return (
     <div className="bg-white shadow rounded overflow-hidden group">
       {/* product image */}
       <div className="relative">
+        {shouldRedirect(redirect)}
         {/* <img src="images/products/product9.jpg" className="full" /> */}
         <ShowImage item={product} url="product" />
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition">
@@ -59,12 +74,12 @@ const Card = ({ product }) => {
           <div className="text-xs text-gray-500 ml-3">(150)</div>
         </div>
       </div>
-      <a
-        href
+      <button
+        onClick={addToCart}
         className="block w-full py-1 text-center text-white bg-primary border border-primary rounded-b hover:bg-transparent hover:text-primary transition "
       >
         Add to cart
-      </a>
+      </button>
       {/* product content end */}
     </div>
   );

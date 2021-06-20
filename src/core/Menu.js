@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Link, withRouter } from "react-router-dom";
 import { signout, isAuthenticated } from "../auth";
+import { itemTotal } from "./cartHelpers";
 
 const isActive = (history, path) => {
   if (history.location.pathname === path) {
@@ -39,6 +40,18 @@ const Menu = ({ history }) => (
           >
             Shop
           </Link>
+
+          {/* <Link
+            className="text-gray-300 hover:text-white transition relative"
+            to="/cart"
+            style={isActive(history, "/cart")}
+          >
+            Cart
+            <span className="absolute -right-5 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">
+              {itemTotal()}
+            </span>
+          </Link> */}
+
           {isAuthenticated() && isAuthenticated().user.role === 0 && (
             <Link
               className="text-gray-300 hover:text-white transition"
